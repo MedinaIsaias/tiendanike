@@ -1,18 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-import NavBar from './componentes/navbar';
 
+import './App.css';
+import NavBar from './components/NavBar';
+import ClassComponent from './components/ClassComponent/ClassComponent';
+import FunctionalComponent from './components/FunctionalComponent/FunctionalComponent';
+import '../src/components/CarWidget/CarWidget.css';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 function App() {
   return (
     <div className="App">
-      <NavBar/>
-      <header className="App-header">
-        
-        <img src={logo} className="App-logo" alt="logo" />
-        
-      </header>
+        <NavBar/>
+        <ItemListContainer greeting='hola'/>
+        <ClassComponent/>
+        <FunctionalComponent/>
     </div>
   );
 }
 
 export default App;
+

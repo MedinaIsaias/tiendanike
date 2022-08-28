@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 10vmin;
+  height: 50px;
   pointer-events: none;
 }
 
@@ -41,13 +41,15 @@
   background-color: greenyellow;
 }
 .navbar-nav{
+  padding-bottom: 10px;
   text-align: center;
 }
 ul {
+  padding-bottom: 10px;
   list-style: none;
   
 }
 ul li{
-  padding: 100px;
+  padding: 75px;
   display: inline;
 }
