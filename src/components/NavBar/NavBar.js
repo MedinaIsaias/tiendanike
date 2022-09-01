@@ -1,5 +1,5 @@
-import logo from '../logo.svg';
-import carrito from '../components/CarWidget/carrito.png'
+import logo from '../../logo.svg';
+import carrito from '../../assets/img/carrito.png'
 const NavBar = ()=>{
     return(
     <div className="navbar-contenedor">
