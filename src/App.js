@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
         <NavBar/>
-        <ItemListContainer greeting='remera nike roja'/>
+        <ItemListContainer/>
         <ItemCount stock={stock} sumar={sumar} restar={restar} items={items} />
         <Boton/>
     </div>

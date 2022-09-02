@@ -1,8 +1,28 @@
+import data from "../MockDate";
+import { useEffect, useState } from "react";
+import ItemList from "../ItemList/ItemList";
 
+const ItemListContainer = () => {
 
-const ItemListContainer = ({greeting}) => {
+  const [productList,setProductlist] = useState([])
+
+    useEffect(() => {
+    getProducts.then ((response) => {
+      setProductlist (response);
+    });
+  },)
+
+  const getProducts = new Promise ((resolve,reject) => {
+       setTimeout(() => {
+       resolve(data);
+       }, 2000);
+    });
+
+  
   return (
-    <div>{greeting}</div>
+    <>
+    <ItemList lista={productList}/>
+    </>
   );
 };
 
