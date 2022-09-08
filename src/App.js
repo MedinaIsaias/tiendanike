@@ -2,9 +2,10 @@ import React, {useState} from 'react'
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import '../src/components/CarWidget/CarWidget.css';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+
 import ItemCount from './components/ItemCount/ItemCount';
 import Boton from './components/Boton/Boton';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   const stock = 10
@@ -15,9 +16,10 @@ function App() {
   return (
     <div className="App">
         <NavBar/>
-        <ItemListContainer/>
+        <ItemDetailContainer/>
         <ItemCount stock={stock} sumar={sumar} restar={restar} items={items} />
         <Boton/>
+        
     </div>
   );
 }
