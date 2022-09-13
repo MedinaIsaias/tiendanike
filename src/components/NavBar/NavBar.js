@@ -1,26 +1,29 @@
 import logo from '../../logo.svg';
 import carrito from '../../assets/img/carrito.png'
+import { Link } from 'react-router-dom';
+
 const NavBar = ()=>{
     return(
     <div className="navbar-contenedor">
         
-        <ul class="navbar-nav">
-            <li class="nav-item">
+        <ul className="navbar-nav">
+            <li><Link to={'/'}>
                 <img src={logo} className="App-logo" alt="logo" />
+                </Link>
             </li>
-            <li class="nav-item">
-                <a class="nav-link active text-light" aria-current="page"href="src/paginas/Vehiculos.html">Vehiculos</a>
+             <li>
+                <Link to={'/vehiculo'}>vehiculo</Link>
             </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" href="src/paginas/Electronica.html">Electronica</a>
+            <li>
+               <Link to={'/electronica'}>electronica</Link>
             </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" href="src/paginas/Libros.html">Libros</a>
+            <li>
+                <Link to={'/libros'}>libros</Link>
             </li>
-            <li class="nav-item">
-                <button class="login">login</button>
+             <li>
+                <button className="login">login</button>
             </li>
-            <li class="nav-item">
+             <li>
                 <img src={carrito} className="carrito" alt="carrito"/>
             </li>
         </ul>

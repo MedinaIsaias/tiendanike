@@ -1,6 +1,6 @@
-import data from "../MockDate";
+import data from "../../components/MockDate";
 import { useEffect, useState } from "react";
-import ItemList from "../ItemList/ItemList";
+import ItemList from "../../components/ItemList/ItemList";
 
 const ItemListContainer = () => {
 
