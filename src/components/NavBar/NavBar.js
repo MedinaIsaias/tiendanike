@@ -12,13 +12,13 @@ const NavBar = ()=>{
                 </Link>
             </li>
              <li>
-                <Link to={'/vehiculo'}>vehiculo</Link>
+                <Link to={'category/vehiculo'}>vehiculo</Link>
             </li>
             <li>
-               <Link to={'/electronica'}>electronica</Link>
+               <Link to={'category/electronica'}>electronica</Link>
             </li>
             <li>
-                <Link to={'/libros'}>libros</Link>
+                <Link to={'category/libros'}>libros</Link>
             </li>
              <li>
                 <button className="login">login</button>
