@@ -2,19 +2,15 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import '../src/components/CarWidget/CarWidget.css';
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import ItemListContainer from './pages/ItemListContainer/ItemListContainer';
-//import ItemCount from './components/ItemCount/ItemCount';
-//import Boton from './components/Boton/Boton';
 import ItemDetailContainer from './pages/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import {CartProvider} from '../src/context/cartProvider'
 
 function App() {
-  //const stock = 10
-  //const [items, setItems] = useState(0)
-  //const sumar = () => items < stock ? setItems(items + 1) : alert('Se alcanzo el maximo de stock')
-  //const restar = () => items > 0 ? setItems(items - 1) : alert('no se pueden introducir valores negativos')
-
+ 
   return (
+    <CartProvider>
     <BrowserRouter>
     <NavBar/>
     <Routes>
@@ -26,7 +22,7 @@ function App() {
       <Route path='category/:categoryName' element={<ItemListContainer/>}/>
     </Routes>
     </BrowserRouter>
-   
+    </CartProvider>
   );
 }
 

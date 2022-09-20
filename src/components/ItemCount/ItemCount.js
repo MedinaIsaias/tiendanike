@@ -1,13 +1,29 @@
+const ItemCount = ({stock,count,setCount})=>{
 
-const ItemCount = (props) => {
-  return (
-         <div>
-             <div>Tengo {props.items} items.</div>
-             <div>Stock {props.stock}</div>
-             <button onClick={props.sumar}>+</button>
-             <button onClick={props.restar}>-</button>
-         </div>
-    )
-}
+   
+   
+    const incrementar =()=>{
+        if(count < stock){
+            setCount(count + 1);
+        }
+    };
+const decrementar =()=>{
+    if(count > 0){
+        setCount(count - 1);
+    }
+};
+return(
+    <div>
+        <div>
+        <button className="botonIncrementar" onClick={incrementar}>+</button>
+        <p>{count}</p>
+        <button className="botonDecrementar" onClick={decrementar}>-</button>
+        </div>
+        
+        
+        
+    </div>
+);
+};
 
 export default ItemCount

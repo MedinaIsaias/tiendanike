@@ -19,7 +19,6 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-    estoy en el item details
     {product ? (<ItemDetail product={product} />)
     :(
       <h2>Obteniendo el detalle....</h2>
