@@ -3,10 +3,12 @@ import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
 import {useContext,useState} from 'react';
 import {CartContext} from '../../context/cartContext'
-
+import {getFirestore} from '../../firebase';
+ 
 const ItemDetail = ({product}) => {
   const {addToCart} = useContext(CartContext)
   const[count, setCount] = useState(1);
+  const db=getFirestore();
   function onAdd(product){
        addToCart(product,count)
     

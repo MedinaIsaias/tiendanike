@@ -10,19 +10,31 @@ const addToCart = (item, quantity) =>{
   }else{
     setCart([...cart,{...item,quantity}]);
   }
-  console.log('cart',[...cart,{...item,quantity}]);
-
 };
+
+
 
 const isInCart =(id) =>{
 return cart.some((item) =>item.id === id);
 };
 
+
+const removeItem = (producId) =>{
+  let nuevoArreglo = [];
+  cart.forEach((product) =>{
+    if(product.id === producId){
+      console.log(product);
+    }else{
+      nuevoArreglo.push(product);
+    }
+  });
+  setCart(nuevoArreglo);
+};
 /*const clear = () =>{
   setCart([]);
 }*/
 return(
-    <CartContext.Provider value={{cart, addToCart}}>
+    <CartContext.Provider value={{cart, addToCart,removeItem}}>
         {children}
     </CartContext.Provider>
 )

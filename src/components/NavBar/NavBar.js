@@ -1,8 +1,8 @@
 import logo from '../../logo.svg';
-import carrito from '../../assets/img/carrito.png'
+import CarWidget from '../CarWidget/CarWidget';
 import { Link } from 'react-router-dom';
 
-const NavBar = ()=>{
+const NavBar = (carrito)=>{
     return(
     <div className="navbar-contenedor">
         
@@ -24,7 +24,9 @@ const NavBar = ()=>{
                 <button className="login">login</button>
             </li>
              <li>
-                <img src={carrito} className="carrito" alt="carrito"/>
+                <Link to={'carrito'}>
+               <CarWidget img={carrito} className='carrito'/>
+                </Link>
             </li>
         </ul>
     </div>
