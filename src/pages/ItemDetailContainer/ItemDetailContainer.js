@@ -16,7 +16,7 @@ const ItemDetailContainer = () => {
     const queryDoc=doc(db,'items',id);
     getDoc(queryDoc)
     .then((res) =>{
-      setProduct(res.data());
+      setProduct({id:res.id, ...res.data()});
     
   })
   .catch((err)=>console.log(err));
