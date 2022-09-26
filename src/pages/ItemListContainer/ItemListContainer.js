@@ -1,7 +1,8 @@
-import data from "../../components/MockDate";
-import { useEffect, useState } from "react";
+
+import { useEffect, useState} from "react";
 import ItemList from "../../components/ItemList/ItemList";
-import { useParams } from "react-router-dom";
+import { useParams} from "react-router-dom";
+import {getFirestore,getDocs,collection,query, where} from 'firebase/firestore';
 
 const ItemListContainer = () => {
   const {categoryName} = useParams();
@@ -9,22 +10,38 @@ const ItemListContainer = () => {
 
     
 
-const getProduct= async()=>{
-
+const getProduct= ()=>{
+  const db = getFirestore();
+  const querySnapshot = collection(db,'items');
+  
   if(categoryName){
-    const response = await data.filter(
-      (item)=>item.category===categoryName
-    );
-    setProductlist(response);
+    const queryFilter = query(
+      querySnapshot, where('categoryid','==',categoryName)
+      );
+
+      getDocs(queryFilter).then((response)=>{
+        const data=response.docs.map((product)=>{
+          return {id: product.id, ...product.data()}
+        });
+        setProductlist(data);
+      });
     }else{
-      const response =await data;
-      setProductlist(response);
+      getDocs(querySnapshot).then((response)=>{
+        const data=response.docs.map((product)=>{
+          return {id: product.id, ...product.data()}
+        });
+        setProductlist(data);
+      });
+
     }
-}
+
+
+  
+};
 
 useEffect(() =>{
   getProduct();
-},[categoryName]);
+},);
 
    
   return (
