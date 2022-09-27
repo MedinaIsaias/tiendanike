@@ -4,13 +4,13 @@ import { useContext } from 'react';
 
 
 const CarWidget = () => {
-  const{cart,}=useContext(CartContext);
+  const{totalProducts}=useContext(CartContext);
+  
 
   return (
     <>
-  {cart.length}
   <img src={carrito} width={'50px'} className="carrito" alt="carrito"/>
-  
+  <span>{totalProducts()|| ''}</span>
       </>
   
   );

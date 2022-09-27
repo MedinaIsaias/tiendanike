@@ -17,7 +17,9 @@ const addToCart = (item, quantity) =>{
 const isInCart =(id) =>{
 return cart.some((item) =>item.id === id);
 };
-
+const totalProducts=()=>
+cart.reduce((acumulador,productoActual)=>
+acumulador+productoActual.quantity,0)
 
 const removeItem = (producId) =>{
   let nuevoArreglo = [];
@@ -30,11 +32,12 @@ const removeItem = (producId) =>{
   });
   setCart(nuevoArreglo);
 };
+
 /*const clear = () =>{
   setCart([]);
 }*/
 return(
-    <CartContext.Provider value={{cart, addToCart,removeItem}}>
+    <CartContext.Provider value={{cart, addToCart,removeItem,totalProducts}}>
         {children}
     </CartContext.Provider>
 )

@@ -23,7 +23,8 @@ const Cart = () => {
             <button className="add-btn" onClick={()=> removeItem(Item.id)}>
                eliminar carrito
         </button>
-        </div>
+       </div>
+       
         ))}
         </>
     )}
