@@ -1,24 +1,25 @@
-import logo from '../../logo.svg';
+import './NavBar.css'
 import CarWidget from '../CarWidget/CarWidget';
 import { Link } from 'react-router-dom';
+import lobo from '../../assets/img/lobo.png'
 
 const NavBar = (carrito)=>{
     return(
-    <div className="navbar-contenedor">
+    <div className="navbar-contenedor navbar-dark bg-primary nav-link">
         
-        <ul className="navbar-nav">
+        <ul>
             <li><Link to={'/'}>
-                <img src={logo} className="App-logo" alt="logo" />
+                <img src={lobo} className="lobo" alt="logo"/>
                 </Link>
             </li>
-             <li>
-                <Link to={'category/vehiculo'}>vehiculo</Link>
+             <li >
+                <Link to={'category/vehiculo'} className="text-white">vehiculo</Link>
             </li>
             <li>
-               <Link to={'category/electronica'}>electronica</Link>
+               <Link to={'category/electronica'}className="text-white">electronica</Link>
             </li>
             <li>
-                <Link to={'category/libros'}>libros</Link>
+                <Link to={'category/libros'}className="text-white">libros</Link>
             </li>
              <li>
                 <button className="login">login</button>

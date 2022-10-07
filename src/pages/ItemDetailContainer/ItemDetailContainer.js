@@ -31,7 +31,7 @@ const ItemDetailContainer = () => {
     <div>
     {product ? (<ItemDetail product={product} />)
     :(
-      <h2>Obteniendo el detalle....</h2>
+      <h2 className='text-white'>Obteniendo el detalle....</h2>
     )}
     </div>
   );

@@ -16,7 +16,7 @@ const ItemDetail = ({product}) => {
      setGoToCart(true);    
 }
   return (
-    <div className='padre'>
+    <div className="text-white">
         <img className='image' src={product.image} alt={product.title}/>
         <h2 className='titulo'>{product.title}</h2>
        <div>

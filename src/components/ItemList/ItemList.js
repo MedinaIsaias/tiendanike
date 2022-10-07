@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ItemList = ({lista}) => {
   
   return (
-     <div>
+     <div className="container overflow-hidden text-center">
          {
         lista.map((product) => (
           <Link key={product.id}
