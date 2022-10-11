@@ -10,7 +10,7 @@ const CarWidget = () => {
   return (
     <>
   <img src={carrito} width={'50px'} className="carrito" alt="carrito"/>
-  <span>{totalProducts()|| ''}</span>
+  <span className='text-white'>{totalProducts()|| ''}</span>
       </>
   
   );
