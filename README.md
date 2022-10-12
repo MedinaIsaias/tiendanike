@@ -6,7 +6,7 @@
 ## Demo de la web [link](https://tiendanike.vercel.app/)
 
 ### Website Sneak peak
-
+<p><img src="https://github.com/MedinaIsaias/tiendanike/blob/main/src/assets/img/clideo_editor_eb113f47731b4fbfa1b6fffdb55ddbb4.gif" height="300px" width="400px"> </p>
 
 Author:
 
